@@ -99,7 +99,7 @@
 
 
         <Button
-            android:id="@+id/actionSignIn"
+            android:id="@+id/actionSignInPatient"
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                 android:text="@string/don_t_have_an_account" />
 
             <TextView
-                android:id="@+id/signUp"
+                android:id="@+id/patientsignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

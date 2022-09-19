@@ -32,7 +32,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/signIn"
+                android:id="@+id/patsignIn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -113,22 +113,22 @@
                 android:hint="@string/phone_number" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idNoTextInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/idNoTextInputLayout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp">-->
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idNo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:hint="@string/id_number"
-                android:inputType="phone"
-                android:textColorHint="#757575" />
-        </com.google.android.material.textfield.TextInputLayout>
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/idNo"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_light"-->
+<!--                android:hint="@string/id_number"-->
+<!--                android:inputType="phone"-->
+<!--                android:textColorHint="#757575" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordTextInputLayout"
@@ -169,7 +169,7 @@
 
 
         <Button
-            android:id="@+id/regContunue"
+            android:id="@+id/regPatientContinue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"

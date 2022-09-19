@@ -47,12 +47,23 @@
         android:id="@+id/patientSignUpFragment"
         android:name="com.example.hscs.PatientAuth.SignUp.PatientSignUpFragment"
         android:label="fragment_patient_sign_up"
-        tools:layout="@layout/fragment_patient_sign_up" />
+        tools:layout="@layout/fragment_patient_sign_up" >
+        <action
+            android:id="@+id/action_patientSignUpFragment_to_speciliastsFragment"
+            app:destination="@id/speciliastsFragment" />
+        <action
+            android:id="@+id/action_patientSignUpFragment_to_patientSignInFragment"
+            app:destination="@id/patientSignInFragment" />
+    </fragment>
     <fragment
         android:id="@+id/specialistSignUpFragment"
         android:name="com.example.hscs.SpecialistAuth.SignUp.SpecialistSignUpFragment"
         android:label="fragment_specialist_sign_up"
-        tools:layout="@layout/fragment_specialist_sign_up" />
+        tools:layout="@layout/fragment_specialist_sign_up" >
+        <action
+            android:id="@+id/action_specialistSignUpFragment_to_specialistMoreInfoFragment"
+            app:destination="@id/specialistMoreInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/patientSignInFragment"
         android:name="com.example.hscs.PatientAuth.SignIn.PatientSignInFragment"
@@ -61,6 +72,9 @@
         <action
             android:id="@+id/action_patientSignInFragment_to_patientSignUpFragment"
             app:destination="@id/patientSignUpFragment" />
+        <action
+            android:id="@+id/action_patientSignInFragment_to_speciliastsFragment"
+            app:destination="@id/speciliastsFragment" />
     </fragment>
     <fragment
         android:id="@+id/specialistSignInFragment"
@@ -70,5 +84,36 @@
         <action
             android:id="@+id/action_specialistSignInFragment_to_specialistSignUpFragment"
             app:destination="@id/specialistSignUpFragment" />
+        <action
+            android:id="@+id/action_specialistSignInFragment_to_specialistTextPageFragment"
+            app:destination="@id/specialistTextPageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/specialistMoreInfoFragment"
+        android:name="com.example.hscs.specialistMoreInfo.SpecialistMoreInfoFragment"
+        android:label="fragment_specialist_more_info"
+        tools:layout="@layout/fragment_specialist_more_info" >
+        <action
+            android:id="@+id/action_specialistMoreInfoFragment_to_specialistTextPageFragment"
+            app:destination="@id/specialistTextPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/speciliastsFragment"
+        android:name="com.example.hscs.userList.SpeciliastsFragment"
+        android:label="fragment_speciliasts"
+        tools:layout="@layout/fragment_speciliasts" >
+        <action
+            android:id="@+id/action_speciliastsFragment_to_patientClickedFragment"
+            app:destination="@id/patientClickedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientClickedFragment"
+        android:name="com.example.hscs.patientClicked.PatientClickedFragment"
+        android:label="fragment_patient_clicked"
+        tools:layout="@layout/fragment_patient_clicked" />
+    <fragment
+        android:id="@+id/specialistTextPageFragment"
+        android:name="com.example.hscs.specialistTextPage.SpecialistTextPageFragment"
+        android:label="fragment_specialist_text_page"
+        tools:layout="@layout/fragment_specialist_text_page" />
 </navigation>
