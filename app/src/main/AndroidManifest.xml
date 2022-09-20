@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hscs">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".HscsApp"
         android:allowBackup="true"

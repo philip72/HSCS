@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.example.hscs.Auth.AuthActions
 import com.example.hscs.Auth.AuthUIState
 import com.example.hscs.Auth.AuthViewModel
@@ -22,9 +23,10 @@ class ChoosingFragment : Fragment(R.layout.fragment_choosing) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        passData()
+
         setUpObservers()
         onClick()
+
 
     }
 
@@ -46,6 +48,7 @@ class ChoosingFragment : Fragment(R.layout.fragment_choosing) {
 
 
     private fun passData() {
+
 
     }
 

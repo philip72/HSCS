@@ -24,9 +24,6 @@
         android:label="fragment_choosing"
         tools:layout="@layout/fragment_choosing" >
         <action
-            android:id="@+id/choosingFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
             android:id="@+id/action_choosingFragment_to_specialistSignInFragment"
             app:destination="@id/specialistSignInFragment" />
         <action
@@ -63,6 +60,9 @@
         <action
             android:id="@+id/action_specialistSignUpFragment_to_specialistMoreInfoFragment"
             app:destination="@id/specialistMoreInfoFragment" />
+        <action
+            android:id="@+id/action_specialistSignUpFragment_to_specialistSignInFragment"
+            app:destination="@id/specialistSignInFragment" />
     </fragment>
     <fragment
         android:id="@+id/patientSignInFragment"
@@ -110,10 +110,27 @@
         android:id="@+id/patientClickedFragment"
         android:name="com.example.hscs.patientClicked.PatientClickedFragment"
         android:label="fragment_patient_clicked"
-        tools:layout="@layout/fragment_patient_clicked" />
+        tools:layout="@layout/fragment_patient_clicked" >
+        <action
+            android:id="@+id/action_patientClickedFragment_to_speciliastsFragment"
+            app:destination="@id/speciliastsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/specialistTextPageFragment"
         android:name="com.example.hscs.specialistTextPage.SpecialistTextPageFragment"
         android:label="fragment_specialist_text_page"
-        tools:layout="@layout/fragment_specialist_text_page" />
+        tools:layout="@layout/fragment_specialist_text_page" >
+        <action
+            android:id="@+id/action_specialistTextPageFragment_to_selectedPatientFragment"
+            app:destination="@id/selectedPatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedPatientFragment"
+        android:name="com.example.hscs.selectedPatient.SelectedPatientFragment"
+        android:label="fragment_selected_patient"
+        tools:layout="@layout/fragment_selected_patient" >
+        <action
+            android:id="@+id/action_selectedPatientFragment_to_specialistTextPageFragment"
+            app:destination="@id/specialistTextPageFragment" />
+    </fragment>
 </navigation>

@@ -6,27 +6,59 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.hscs.R
+import com.example.hscs.SpecialistAuth.SignUp.SpecialistSignUpActions
+import com.example.hscs.SpecialistAuth.SignUp.SpecialistSignUpUIState
+import com.example.hscs.SpecialistAuth.SignUp.SpecialistSignUpViewModel
+import com.example.hscs.databinding.FragmentSpecialistMoreInfoBinding
+import com.example.hscs.databinding.FragmentSpecialistSignUpBinding
+import com.example.hscs.util.observeEvent
+import com.example.hscs.util.viewBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SpecialistMoreInfoFragment : Fragment() {
+class SpecialistMoreInfoFragment : Fragment(R.layout.fragment_specialist_more_info) {
 
-    companion object {
-        fun newInstance() = SpecialistMoreInfoFragment()
+    private val binding by viewBinding(FragmentSpecialistMoreInfoBinding::bind)
+    private val viewModel: SpecialistMoreInfoViewModel by viewModel()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        passData()
+        setUpObservers()
+        onClick()
+
     }
 
-    private lateinit var viewModel: SpecialistMoreInfoViewModel
+    private fun onClick() {
+        binding.apply {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_specialist_more_info, container, false)
+            SpecialistMoreDetails.setOnClickListener{
+                viewModel.navigateToSpecialistTextPage()
+
+            }
+
+        }
+
     }
+    private fun passData() {
+    }
+    private fun setUpObservers() {
+        viewModel.uiState.observe(viewLifecycleOwner) {
+            when (it) {
+                SpecialistMoreDetailsUIState.Loading ->{}  //renderLoading()
+                is SpecialistMoreDetailsUIState.Error -> {
+                    //renderError(errorTitle = it.title, errorMessage = it.message)
+                }
+                else -> {}
+            }
+        }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SpecialistMoreInfoViewModel::class.java)
-        // TODO: Use the ViewModel
+        viewModel.interactions.observeEvent(viewLifecycleOwner) {
+            when (it) {
+                is SpecialistMoreDetailsActions.Navigate -> findNavController().navigate(it.destination)
+            }
+        }
     }
 
 }

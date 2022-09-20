@@ -32,7 +32,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/signIn"
+                android:id="@+id/specialistregsignIn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -176,7 +176,6 @@
             android:text="@string/continuee"
             android:fontFamily="@font/poppin_bold"
             android:textAllCaps="false"
-            android:enabled="false"
             android:background="@drawable/rounded_button"
             android:textColor="@android:color/white"
             android:textStyle="bold" />

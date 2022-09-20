@@ -26,7 +26,11 @@ class HscsApp : Application() {
                 patientSignInModule,
                 patientSignUpModule,
                 specialistSignUpModule,
-                choosingModule
+                choosingModule,
+                patientClickedModule,
+                selectedPatientModule,
+                specialistMoreInfoModule,
+                specialistTextPageModule
             )
         }
 

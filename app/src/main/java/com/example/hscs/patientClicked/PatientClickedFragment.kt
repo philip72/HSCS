@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.hscs.R
 
-class PatientClickedFragment : Fragment() {
+class PatientClickedFragment : Fragment(R.layout.fragment_patient_clicked) {
 
     companion object {
         fun newInstance() = PatientClickedFragment()

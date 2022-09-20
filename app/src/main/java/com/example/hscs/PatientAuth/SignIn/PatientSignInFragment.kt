@@ -4,12 +4,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.findNavController
+import com.example.hscs.R
 import com.example.hscs.databinding.FragmentPatientSignInBinding
 import com.example.hscs.util.observeEvent
 import com.example.hscs.util.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class PatientSignInFragment : Fragment() {
+class PatientSignInFragment : Fragment(R.layout.fragment_patient_sign_in) {
 
     private val binding by viewBinding(FragmentPatientSignInBinding::bind)
     private val viewModel: PatientSignInViewModel by viewModel()

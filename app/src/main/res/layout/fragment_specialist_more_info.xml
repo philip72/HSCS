@@ -163,7 +163,6 @@
             android:text="@string/continuee"
             android:fontFamily="@font/poppin_bold"
             android:textAllCaps="false"
-            android:enabled="false"
             android:background="@drawable/rounded_button"
             android:textColor="@android:color/white"
             android:textStyle="bold" />

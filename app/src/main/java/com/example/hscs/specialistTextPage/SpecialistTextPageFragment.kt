@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.hscs.R
 
-class SpecialistTextPageFragment : Fragment() {
+class SpecialistTextPageFragment : Fragment(R.layout.fragment_specialist_text_page) {
 
     companion object {
         fun newInstance() = SpecialistTextPageFragment()

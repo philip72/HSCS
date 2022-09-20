@@ -21,17 +21,8 @@ class ChoosingViewModel : ViewModel() {
 
 
 
-    fun register() {
-        _uiState.postValue(ChoosingUIState.Loading)
-
-        viewModelScope.launch() {
-            val userDataResponse = withContext(Dispatchers.Main) {
 
 
-            }
-
-        }
-    }
 
     fun navigateToPatientSignIn(){
         val toPatientSignIn = ChoosingFragmentDirections.actionChoosingFragmentToPatientSignInFragment(

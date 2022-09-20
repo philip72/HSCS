@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.hscs.R
 
-class SpeciliastsFragment : Fragment() {
+class SpeciliastsFragment : Fragment(R.layout.fragment_speciliasts) {
 
     companion object {
         fun newInstance() = SpeciliastsFragment()

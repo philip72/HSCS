@@ -5,12 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.hscs.PatientAuth.SignIn.PatientSignInActions
+import com.example.hscs.R
 import com.example.hscs.databinding.FragmentSpecialistSignInBinding
 import com.example.hscs.util.observeEvent
 import com.example.hscs.util.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SpecialistSignInFragment : Fragment() {
+class SpecialistSignInFragment : Fragment(R.layout.fragment_specialist_sign_in) {
 
     private val binding by viewBinding(FragmentSpecialistSignInBinding::bind)
     private val viewModel: SpecialistSignInViewModel by viewModel()
