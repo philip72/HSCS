@@ -58,11 +58,11 @@
         android:label="fragment_specialist_sign_up"
         tools:layout="@layout/fragment_specialist_sign_up" >
         <action
-            android:id="@+id/action_specialistSignUpFragment_to_specialistMoreInfoFragment"
-            app:destination="@id/specialistMoreInfoFragment" />
-        <action
             android:id="@+id/action_specialistSignUpFragment_to_specialistSignInFragment"
             app:destination="@id/specialistSignInFragment" />
+        <action
+            android:id="@+id/action_specialistSignUpFragment_to_specialistTextPageFragment"
+            app:destination="@id/specialistTextPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/patientSignInFragment"
@@ -86,15 +86,6 @@
             app:destination="@id/specialistSignUpFragment" />
         <action
             android:id="@+id/action_specialistSignInFragment_to_specialistTextPageFragment"
-            app:destination="@id/specialistTextPageFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/specialistMoreInfoFragment"
-        android:name="com.example.hscs.specialistMoreInfo.SpecialistMoreInfoFragment"
-        android:label="fragment_specialist_more_info"
-        tools:layout="@layout/fragment_specialist_more_info" >
-        <action
-            android:id="@+id/action_specialistMoreInfoFragment_to_specialistTextPageFragment"
             app:destination="@id/specialistTextPageFragment" />
     </fragment>
     <fragment

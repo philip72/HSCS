@@ -25,7 +25,7 @@ class PatientSignUpViewModel : ViewModel() {
 
     private val _interactions = MutableLiveData<Event<PatientSignUpActions>>()
     val interactions: LiveData<Event<PatientSignUpActions>> = _interactions
-/*    fun navigateToSpecialistPage() {
+   fun navigateToSpecialistPage() {
         _uiState.postValue(PatientSignUpUIState.Loading)
 
         val toSpecialistPage = PatientSignUpFragmentDirections.actionPatientSignUpFragmentToSpeciliastsFragment(
@@ -33,7 +33,7 @@ class PatientSignUpViewModel : ViewModel() {
         )
         val action = PatientSignUpActions.Navigate(toSpecialistPage)
         _interactions.postValue(action.asEvent())
-    }*/
+    }
 
     fun navigateToPatientSignIn() {
         _uiState.postValue(PatientSignUpUIState.Loading)
@@ -45,6 +45,7 @@ class PatientSignUpViewModel : ViewModel() {
         _interactions.postValue(action.asEvent())
     }
 
+/*
     fun navigateToSpecialistPage(
         firstname: String,
         lastname: String,
@@ -67,10 +68,12 @@ class PatientSignUpViewModel : ViewModel() {
                 } else {
                     // If sign in fails, display a message to the user.
                     Timber.tag(TAG).w(task.exception, "createUserWithEmail:failure")
-                  /*  Toast.makeText(
+                  */
+/*  Toast.makeText(
                         this, "Authentication failed.",
                         Toast.LENGTH_SHORT
-                    ).show()*/
+                    ).show()*//*
+
                     updateUI(null)
                 }
             }
@@ -86,9 +89,11 @@ class PatientSignUpViewModel : ViewModel() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
+*/
 /*
         val user = Firebase.auth.currentUser
-*/
+*//*
+
         user?.let {
             // Name, email address, and profile photo Url
             val name = user.displayName
@@ -105,6 +110,7 @@ class PatientSignUpViewModel : ViewModel() {
         }
     }
 
+*/
 
 }
 

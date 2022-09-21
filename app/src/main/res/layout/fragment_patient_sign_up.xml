@@ -54,7 +54,7 @@
             android:layout_marginTop="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/firtName"
+                android:id="@+id/patientFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_light"
@@ -71,7 +71,7 @@
             android:layout_marginTop="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/lastName"
+                android:id="@+id/patientLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_light"
@@ -88,7 +88,7 @@
             android:layout_marginTop="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/regEmail"
+                android:id="@+id/patientRegEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_light"
@@ -105,7 +105,7 @@
             android:layout_marginTop="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/phoneNo"
+                android:id="@+id/patientPhoneNo"
                 android:layout_width="match_parent"
                 android:inputType="phone"
                 android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
             android:layout_marginTop="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password"
+                android:id="@+id/patientPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_light"
@@ -176,7 +176,6 @@
             android:text="@string/continuee"
             android:fontFamily="@font/poppin_bold"
             android:textAllCaps="false"
-            android:enabled="false"
             android:background="@drawable/rounded_button"
             android:textColor="@android:color/white"
             android:textStyle="bold" />

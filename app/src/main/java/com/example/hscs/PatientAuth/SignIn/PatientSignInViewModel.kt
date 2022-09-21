@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavDirections
 import com.example.hscs.util.Event
 import com.example.hscs.util.asEvent
+import com.google.firebase.database.DatabaseReference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -18,6 +19,7 @@ class PatientSignInViewModel : ViewModel() {
 
     private val _interactions = MutableLiveData<Event<PatientSignInActions>>()
     val interactions: LiveData<Event<PatientSignInActions>> = _interactions
+
 
 
 

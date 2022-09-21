@@ -6,6 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.NavDirections
 import com.example.hscs.PatientAuth.SignUp.PatientSignUpFragmentDirections
 import com.example.hscs.PatientAuth.SignUp.PatientSignUpUIState
+import com.example.hscs.specialistMoreInfo.SpecialistMoreDetailsActions
+import com.example.hscs.specialistMoreInfo.SpecialistMoreDetailsUIState
 import com.example.hscs.util.Event
 import com.example.hscs.util.asEvent
 
@@ -15,13 +17,22 @@ class SpecialistSignUpViewModel : ViewModel() {
 
     private val _interactions = MutableLiveData<Event<SpecialistSignUpActions>>()
     val interactions: LiveData<Event<SpecialistSignUpActions>> = _interactions
-    fun navigateToSpecialistMoreDetails() {
-        _uiState.postValue(SpecialistSignUpUIState .Loading)
+//    fun navigateToSpecialistMoreDetails() {
+//        _uiState.postValue(SpecialistSignUpUIState .Loading)
+//
+//        val toSpecialistMoreDetails = SpecialistSignUpFragmentDirections.actionSpecialistSignUpFragmentToSpecialistMoreInfoFragment(
+//            // pass here args
+//        )
+//        val action = SpecialistSignUpActions.Navigate(toSpecialistMoreDetails)
+//        _interactions.postValue(action.asEvent())
+//    }
+    fun navigateToSpecialistTextPage() {
+        _uiState.postValue(SpecialistSignUpUIState.Loading)
 
-        val toSpecialistMoreDetails = SpecialistSignUpFragmentDirections.actionSpecialistSignUpFragmentToSpecialistMoreInfoFragment(
+        val toSpecialistTextPage = SpecialistSignUpFragmentDirections.actionSpecialistSignUpFragmentToSpecialistTextPageFragment(
             // pass here args
         )
-        val action = SpecialistSignUpActions.Navigate(toSpecialistMoreDetails)
+        val action = SpecialistSignUpActions.Navigate(toSpecialistTextPage)
         _interactions.postValue(action.asEvent())
     }
 

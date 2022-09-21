@@ -25,7 +25,7 @@ class SpecialistMoreInfoFragment : Fragment(R.layout.fragment_specialist_more_in
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         passData()
-        setUpObservers()
+        //setUpObservers()
         onClick()
 
     }
@@ -33,32 +33,32 @@ class SpecialistMoreInfoFragment : Fragment(R.layout.fragment_specialist_more_in
     private fun onClick() {
         binding.apply {
 
-            SpecialistMoreDetails.setOnClickListener{
-                viewModel.navigateToSpecialistTextPage()
+//            SpecialistMoreDetails.setOnClickListener{
+//                viewModel.navigateToSpecialistTextPage()
 
             }
 
         }
 
-    }
+
     private fun passData() {
     }
-    private fun setUpObservers() {
-        viewModel.uiState.observe(viewLifecycleOwner) {
-            when (it) {
-                SpecialistMoreDetailsUIState.Loading ->{}  //renderLoading()
-                is SpecialistMoreDetailsUIState.Error -> {
-                    //renderError(errorTitle = it.title, errorMessage = it.message)
-                }
-                else -> {}
-            }
-        }
-
-        viewModel.interactions.observeEvent(viewLifecycleOwner) {
-            when (it) {
-                is SpecialistMoreDetailsActions.Navigate -> findNavController().navigate(it.destination)
-            }
-        }
-    }
+//    private fun setUpObservers() {
+//        viewModel.uiState.observe(viewLifecycleOwner) {
+//            when (it) {
+//                SpecialistMoreDetailsUIState.Loading ->{}  //renderLoading()
+//                is SpecialistMoreDetailsUIState.Error -> {
+//                    //renderError(errorTitle = it.title, errorMessage = it.message)
+//                }
+//                else -> {}
+//            }
+//        }
+//
+//        viewModel.interactions.observeEvent(viewLifecycleOwner) {
+//            when (it) {
+//                is SpecialistMoreDetailsActions.Navigate -> findNavController().navigate(it.destination)
+//            }
+//        }
+//    }
 
 }

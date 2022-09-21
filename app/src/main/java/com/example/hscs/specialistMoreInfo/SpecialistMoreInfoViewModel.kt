@@ -16,15 +16,15 @@ class SpecialistMoreInfoViewModel : ViewModel() {
 
     private val _interactions = MutableLiveData<Event<SpecialistMoreDetailsActions>>()
     val interactions: LiveData<Event<SpecialistMoreDetailsActions>> = _interactions
-    fun navigateToSpecialistTextPage() {
-        _uiState.postValue(SpecialistMoreDetailsUIState .Loading)
-
-        val toSpecialistTextPage = SpecialistMoreInfoFragmentDirections.actionSpecialistMoreInfoFragmentToSpecialistTextPageFragment(
-            // pass here args
-        )
-        val action = SpecialistMoreDetailsActions.Navigate(toSpecialistTextPage)
-        _interactions.postValue(action.asEvent())
-    }
+//    fun navigateToSpecialistTextPage() {
+//        _uiState.postValue(SpecialistMoreDetailsUIState .Loading)
+//
+//        val toSpecialistTextPage = SpecialistMoreInfoFragmentDirections.actionSpecialistMoreInfoFragmentToSpecialistTextPageFragment(
+//            // pass here args
+//        )
+//        val action = SpecialistMoreDetailsActions.Navigate(toSpecialistTextPage)
+//        _interactions.postValue(action.asEvent())
+//    }
     // TODO: Implement the ViewModel
 }
 sealed class SpecialistMoreDetailsActions {
